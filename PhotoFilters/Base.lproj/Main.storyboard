@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="14f-ZA-AiZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Filter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoFilters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demirciler.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GVj-bu-sIJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GVj-bu-sIJ" secondAttribute="trailing" id="0mZ-fM-sTn"/>
+                            <constraint firstAttribute="bottom" secondItem="GVj-bu-sIJ" secondAttribute="bottom" id="8vg-Hn-cgL"/>
+                            <constraint firstItem="GVj-bu-sIJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CUW-jn-jbv"/>
+                            <constraint firstItem="GVj-bu-sIJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wt8-eM-r15"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yEj-8G-eCU"/>
+                        <barButtonItem title="Apply Filter" id="cp3-sk-n94">
+                            <connections>
+                                <action selector="applyFilter:" destination="BYZ-38-t0r" id="Puy-MA-pNo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3Yg-cg-Luy"/>
+                        <barButtonItem title="Next page" id="zRp-Uk-qCW">
+                            <connections>
+                                <segue destination="a1v-Uf-Eiq" kind="show" id="bbJ-Ux-Xzg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="spz-bA-e4S"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Filter" id="kpT-Sb-BTN"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="GVj-bu-sIJ" id="LO1-a9-Ej0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="-264"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ciD-Dc-gau">
+            <objects>
+                <viewController id="a1v-Uf-Eiq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6dS-BG-uZk"/>
+                        <viewControllerLayoutGuide type="bottom" id="uD2-O2-u2g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="blv-fU-CgG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secondary Screen!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phA-I5-LSC">
+                                <rect key="frame" x="245" y="138" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="go back" id="OhB-RV-p7v">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Clr-A1-2tB"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IN7-2e-tpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693" y="-262"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Yp-xm-qVw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="14f-ZA-AiZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fXl-eL-EdM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gW9-7o-eKJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TXX-n8-C0w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rW-cg-kD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="-264"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="demirciler.jpg" width="541" height="1024"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Clr-A1-2tB"/>
+    </inferredMetricsTieBreakers>
+</document>
